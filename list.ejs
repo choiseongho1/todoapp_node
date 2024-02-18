@@ -1,0 +1,17 @@
+ <!-- ejs 문법: <% %>여기 안은 자바스크립트 문법을 실행하는 곳임 -->
+ <div class="container-md mt-5">
+    <h2 class="my-3">서버에서 가져온 To Do List</h2>
+    <ul class="list-group">
+      <% for (var i=0; i < posts.length; i++){ %>
+        <li class="list-group-item">
+          <h4>
+            제목 : <%= posts[i].title %>
+          </h4>
+          <p>
+            내용 : <%= posts[i].text %>
+          </p>
+          <button>삭제</button>
+        </li>
+        <% } %>
+    </ul>
+  </div>
